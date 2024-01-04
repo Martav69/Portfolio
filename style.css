@@ -1,12 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'roboto', sans-serif;
     background-color: #F4F7F6;
+    margin: 0;
 }
 
 header {
     text-align: center;
     background-color: #1D1D1D;
     color: white;
+    padding-bottom: 30px;
 }
 
 section {
@@ -17,22 +23,50 @@ footer {
     background-color: #1D1D1D;
     color: white;
     text-align: center;
+    padding: 15px;
+    
 }
 
 .logo {
     display: block;
-    width: 50px;
+    width: 60px;
     max-width: 100%;
-    margin:0 auto;
-    
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.separator {
+    width: 70px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background-color: #999999;
+
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 30px;
 }
 
 h2 {
     font-size: 1.5em;
+    width: 400px;
+    margin:0 auto;
 }
 
 h3 {
     font-size: 1.5em;
+
+}
+h3::before {
+content: "« ";
+color: grey;
+}
+
+h3::after {
+    content: " »";
+    color: grey;
 }
 
 a { 
@@ -44,14 +78,18 @@ a {
 .contact {
     border: solid 1px black;
     border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
 }
 
 ul {
-    padding: 0;
+    display: inline;
 }
 
 li {
     list-style-type: none;
+    display: inline;
+    margin: 10px;
 }
 
 li:hover {
@@ -66,5 +104,61 @@ nav {
     text-align: center;
     background-color: white;
     box-shadow: 0px 3px 1px -1px rgb(0, 0, 0, 0.5);   
+    padding: 15px;
+
+
+}
+
+.contener {
+    width: 80%;
+    margin: auto;
+}
+
+#projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.projet {
+    width: 400px;
+    margin: 30px;
+    display: inline-block;
+    background-color: #f0f1f3;
+    padding-bottom: 15px;
+    border: solid 0px black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+}
+
+.projet:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+
+.projet img {
+    width: 100%;
+    height: auto;
+}
+
+.projet span {
+    text-transform: uppercase;
+    display: block;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.projet .date-project {
+    font-size: 0.7em;
 }
 
